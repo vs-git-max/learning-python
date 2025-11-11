@@ -18,3 +18,5 @@ while number_of_trial <=3:
                 print('Please add some reasonable weight')
             print(f'Your weight is {user_weight}')  
     break              
+else:
+    print('Sorry you have exceeded the number of trials')
