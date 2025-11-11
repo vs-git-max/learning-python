@@ -1,10 +1,8 @@
 # a project to convert weight 
-
 weight = input('What is your weight? ')
 int_weight = int(weight)
 
 entry_standard = input('What is the standard of entry, Kilograms(K) or Pounds(L)? ')
-
 
 standard_entry = entry_standard.lower()
 
