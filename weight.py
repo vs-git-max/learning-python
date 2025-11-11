@@ -1,18 +1,20 @@
-# a project to convert weight 
-weight = input('What is your weight? ')
-int_weight = int(weight)
-
-entry_standard = input('What is the standard of entry, Kilograms(K) or Pounds(L)? ')
-
-standard_entry = entry_standard.lower()
-
-if int_weight > 0:
-    if standard_entry[0]=='k':
-        user_weight = f'{int_weight/0.45}   pounds'
-    elif standard_entry[0] == 'p' or standard_entry == 'l':
-        user_weight= f'{int_weight*0.45} kgs'
+# working on the logic of the program using loops
+number_of_trial =1
+while number_of_trial <=3:
+    number_of_trial+=1    
+    int_weight = int(input('What is your weight? '))
+    if int_weight <= 0 or  type(int_weight) is not int:
+        print('Please add some number weight value')
     else:
-        print('Please add the correct weight standard')
-    print(f'Your weight is {user_weight}')        
-else:
-    print('Weight must be greater than zero')
+        standard_val = input('What is the standard of your weight kilograms(K) or Pounds(L)? ').strip()
+        if len(standard_val)==0 :
+            print('Please add some value')
+        else:
+            if standard_val.lower().startswith('k'):
+                user_weight = f'{int_weight /0.45} pounds'
+            elif standard_val.lower().startswith('p') or standard_val.lower()[0] == 'l':
+                user_weight = f'{int_weight*0.45} kgs'
+            else:
+                print('Please add some reasonable weight')
+            print(f'Your weight is {user_weight}')  
+    break              
