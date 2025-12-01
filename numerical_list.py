@@ -12,10 +12,16 @@ print(even_numbers)
 
 
 squares = []
-for i in range(1, 15):
-    j = i**2
-    squares.append(j)
+for i in range(0, 15, 2):
+    squares.append(i**3)
 print("All squares appended")
 print(squares)
 
 
+# cloning the lists
+some_other_names = names[:]
+some_other_names.append("Obange")
+names.append("Peter")
+
+print(some_other_names)
+print(names)
