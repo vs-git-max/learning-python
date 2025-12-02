@@ -57,3 +57,45 @@ if main_car not in cars:
     print(f"{main_car.title()} is not in the list.")
 else:
     print(f"{main_car.title()} in the list.")
+
+
+alien_color = "yellow"
+if alien_color == "green":
+    points = 5
+elif alien_color == "red":
+    points = 15
+elif alien_color == "yellow":
+    points = 10
+
+
+print(f"You have earned yourself {points} points")
+
+
+# stages of life thing
+
+vowels = ["a", "e", "i", "o", "u"]
+
+
+age = 19
+if age < 2:
+    stage = "baby"
+elif age >= 2 and age < 4:
+    stage = "toddler"
+elif age >= 4 and age < 13:
+    stage = "kid"
+elif age >= 13 and age < 20:
+    stage = "teenager"
+elif age >= 20 and age < 65:
+    stage = "adult"
+elif age >= 65:
+    stage = "elder"
+
+
+first_letter = stage[0]
+if first_letter in vowels:
+    prefix = "an"
+else:
+    prefix = "a"
+
+print(prefix)
+print(f"Based on your age you're {prefix} {stage}")
